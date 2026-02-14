@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameHub | Profile</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a class="logo" href="index.html"><img src="./assets/images/logo.svg" alt="GameHub" /><span>GameHub</span></a>
+        <button class="mobile-toggle">Menu</button>
+        <nav class="nav-links">
+          <a class="nav-link" data-page="index.html" href="index.html">Home</a>
+          <a class="nav-link" data-page="tournaments.html" href="tournaments.html">Tournaments</a>
+          <a class="nav-link" data-page="leaderboard.html" href="leaderboard.html">Leaderboard</a>
+          <a class="nav-link" data-page="news.html" href="news.html">News</a>
+          <a class="nav-link" data-page="profile.html" href="profile.html">Profile</a>
+          <a class="nav-link" data-page="admin.html" href="admin.html">Admin</a>
+        </nav>
+        <div class="auth-links" data-auth-slot></div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container grid grid-2">
+          <div class="card card-body">
+            <div class="section-head">
+              <div class="eyebrow">Account</div>
+              <h1>My Profile</h1>
+            </div>
+            <form id="profileForm">
+              <div class="form-group">
+                <label for="profileName">Name</label>
+                <input id="profileName" required />
+              </div>
+              <div class="form-group">
+                <label for="profileGamerTag">Gamer Tag</label>
+                <input id="profileGamerTag" />
+              </div>
+              <div class="form-group">
+                <label for="profileAvatar">Avatar URL</label>
+                <input id="profileAvatar" />
+              </div>
+              <div class="form-group">
+                <label for="profileBio">Bio</label>
+                <textarea id="profileBio"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="profileTeams">Favorite Teams (comma separated)</label>
+                <input id="profileTeams" />
+              </div>
+              <button class="btn" type="submit">Save Profile</button>
+            </form>
+          </div>
+
+          <div class="card card-body">
+            <div class="section-head">
+              <div class="eyebrow">Quick Favorite Toggle</div>
+              <h2>Favorite Teams</h2>
+            </div>
+            <div class="form-group">
+              <label for="favoriteTeamInput">Team Name</label>
+              <input id="favoriteTeamInput" placeholder="Ex: Phantom Reapers" />
+            </div>
+            <button id="favoriteTeamToggle" class="btn secondary">Add/Remove Team</button>
+            <div id="favoriteTeamList" class="list mt-2"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container"><p>GameHub Profile</p></div>
+    </footer>
+
+    <script type="module" src="./js/profile.js"></script>
+  </body>
+</html>

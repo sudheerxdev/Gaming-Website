@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameHub | News</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a class="logo" href="index.html"><img src="./assets/images/logo.svg" alt="GameHub" /><span>GameHub</span></a>
+        <button class="mobile-toggle">Menu</button>
+        <nav class="nav-links">
+          <a class="nav-link" data-page="index.html" href="index.html">Home</a>
+          <a class="nav-link" data-page="tournaments.html" href="tournaments.html">Tournaments</a>
+          <a class="nav-link" data-page="leaderboard.html" href="leaderboard.html">Leaderboard</a>
+          <a class="nav-link" data-page="news.html" href="news.html">News</a>
+          <a class="nav-link" data-page="profile.html" href="profile.html">Profile</a>
+          <a class="nav-link" data-page="admin.html" href="admin.html">Admin</a>
+        </nav>
+        <div class="auth-links" data-auth-slot></div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Newsroom</div>
+            <h1>Gaming News & Blog</h1>
+          </div>
+
+          <div class="card card-body mb-2">
+            <div class="grid grid-3">
+              <div class="form-group">
+                <label for="newsSearch">Search</label>
+                <input id="newsSearch" placeholder="Search articles" />
+              </div>
+              <div class="form-group">
+                <label for="newsCategory">Category</label>
+                <select id="newsCategory">
+                  <option value="">All Categories</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="newsFeatured">Featured</label>
+                <select id="newsFeatured">
+                  <option value="">All</option>
+                  <option value="true">Featured Only</option>
+                </select>
+              </div>
+            </div>
+            <button id="newsFilterBtn" class="btn mt-2">Apply</button>
+          </div>
+
+          <div id="newsList" class="grid grid-3"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container"><p>GameHub News</p></div>
+    </footer>
+
+    <script type="module" src="./js/news.js"></script>
+  </body>
+</html>

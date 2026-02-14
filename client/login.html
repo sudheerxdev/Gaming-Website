@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameHub | Login</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a class="logo" href="index.html"><img src="./assets/images/logo.svg" alt="GameHub" /><span>GameHub</span></a>
+        <div class="auth-links"><a class="nav-link" href="register.html">Need an account?</a></div>
+      </div>
+    </header>
+
+    <main class="auth-shell">
+      <div class="card auth-card">
+        <h1>Login</h1>
+        <p>Access your dashboard, tournaments, and community tools.</p>
+        <form id="loginForm" class="stack">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" type="email" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" type="password" required />
+          </div>
+          <button class="btn" type="submit">Login</button>
+        </form>
+        <p class="small mt-2">Demo admin: admin@gamehub.gg | Admin@123</p>
+      </div>
+    </main>
+
+    <script type="module" src="./js/login.js"></script>
+  </body>
+</html>

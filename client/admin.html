@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameHub | Admin Panel</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a class="logo" href="index.html"><img src="./assets/images/logo.svg" alt="GameHub" /><span>GameHub</span></a>
+        <button class="mobile-toggle">Menu</button>
+        <nav class="nav-links">
+          <a class="nav-link" data-page="index.html" href="index.html">Home</a>
+          <a class="nav-link" data-page="tournaments.html" href="tournaments.html">Tournaments</a>
+          <a class="nav-link" data-page="leaderboard.html" href="leaderboard.html">Leaderboard</a>
+          <a class="nav-link" data-page="news.html" href="news.html">News</a>
+          <a class="nav-link" data-page="profile.html" href="profile.html">Profile</a>
+          <a class="nav-link" data-page="admin.html" href="admin.html">Admin</a>
+        </nav>
+        <div class="auth-links" data-auth-slot></div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Management</div>
+            <h1>Admin Panel</h1>
+            <p class="subtitle">Create tournaments, schedule matches, and publish news articles.</p>
+          </div>
+
+          <div id="adminGuard" class="card card-body mb-2">Checking admin access...</div>
+
+          <div id="adminContent" class="grid grid-3 hidden">
+            <div class="card card-body">
+              <h3>Create Tournament</h3>
+              <form id="adminTournamentForm" class="stack mt-2">
+                <input id="atTitle" placeholder="Title" required />
+                <input id="atGame" placeholder="Game" required />
+                <textarea id="atDescription" placeholder="Description" required></textarea>
+                <input id="atBanner" placeholder="Banner image URL" required />
+                <input id="atPrize" type="number" placeholder="Prize Pool" />
+                <input id="atFee" type="number" placeholder="Entry Fee" />
+                <input id="atTeams" type="number" placeholder="Max Teams" value="32" />
+                <label class="small inline"><input id="atFeatured" type="checkbox" /> Featured</label>
+                <input id="atStart" type="datetime-local" required />
+                <input id="atEnd" type="datetime-local" required />
+                <button class="btn" type="submit">Create</button>
+              </form>
+            </div>
+
+            <div class="card card-body">
+              <h3>Schedule Match</h3>
+              <form id="adminMatchForm" class="stack mt-2">
+                <input id="amTournament" placeholder="Tournament ID" required />
+                <input id="amGame" placeholder="Game" required />
+                <input id="amTeamA" placeholder="Team A" required />
+                <input id="amTeamB" placeholder="Team B" required />
+                <input id="amDate" type="datetime-local" required />
+                <select id="amStatus">
+                  <option value="Upcoming">Upcoming</option>
+                  <option value="Live">Live</option>
+                  <option value="Completed">Completed</option>
+                </select>
+                <button class="btn secondary" type="submit">Schedule</button>
+              </form>
+            </div>
+
+            <div class="card card-body">
+              <h3>Publish News</h3>
+              <form id="adminNewsForm" class="stack mt-2">
+                <input id="anTitle" placeholder="Title" required />
+                <input id="anSlug" placeholder="Slug" required />
+                <input id="anCategory" placeholder="Category" required />
+                <input id="anImage" placeholder="Image URL" required />
+                <input id="anAuthor" placeholder="Author" />
+                <textarea id="anExcerpt" placeholder="Excerpt" required></textarea>
+                <textarea id="anContent" placeholder="Content" required></textarea>
+                <label class="small inline"><input id="anFeatured" type="checkbox" /> Featured</label>
+                <button class="btn ghost" type="submit">Publish</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container"><p>GameHub Admin</p></div>
+    </footer>
+
+    <script type="module" src="./js/admin.js"></script>
+  </body>
+</html>
