@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameHub | Leaderboard</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a class="logo" href="index.html"><img src="./assets/images/logo.svg" alt="GameHub" /><span>GameHub</span></a>
+        <button class="mobile-toggle">Menu</button>
+        <nav class="nav-links">
+          <a class="nav-link" data-page="index.html" href="index.html">Home</a>
+          <a class="nav-link" data-page="tournaments.html" href="tournaments.html">Tournaments</a>
+          <a class="nav-link" data-page="leaderboard.html" href="leaderboard.html">Leaderboard</a>
+          <a class="nav-link" data-page="news.html" href="news.html">News</a>
+          <a class="nav-link" data-page="profile.html" href="profile.html">Profile</a>
+          <a class="nav-link" data-page="admin.html" href="admin.html">Admin</a>
+        </nav>
+        <div class="auth-links" data-auth-slot></div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Global Rankings</div>
+            <h1>Leaderboard</h1>
+          </div>
+
+          <div class="card card-body mb-2">
+            <div class="grid grid-3">
+              <div class="form-group">
+                <label for="boardType">Type</label>
+                <select id="boardType">
+                  <option value="team">Team Rankings</option>
+                  <option value="player">Player Rankings</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="boardGame">Game</label>
+                <select id="boardGame">
+                  <option value="">All Games</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="boardSort">Sort By</label>
+                <select id="boardSort">
+                  <option value="points">Points</option>
+                  <option value="wins">Wins</option>
+                  <option value="losses">Losses</option>
+                  <option value="name">Name</option>
+                </select>
+              </div>
+            </div>
+            <button id="refreshBoard" class="btn mt-2">Refresh</button>
+          </div>
+
+          <div class="card card-body table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Name</th>
+                  <th>Game</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Losses</th>
+                </tr>
+              </thead>
+              <tbody id="leaderboardBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container"><p>GameHub Leaderboard</p></div>
+    </footer>
+
+    <script type="module" src="./js/leaderboard.js"></script>
+  </body>
+</html>

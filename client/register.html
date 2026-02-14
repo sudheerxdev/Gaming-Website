@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameHub | Register</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a class="logo" href="index.html"><img src="./assets/images/logo.svg" alt="GameHub" /><span>GameHub</span></a>
+        <div class="auth-links"><a class="nav-link" href="login.html">Already have an account?</a></div>
+      </div>
+    </header>
+
+    <main class="auth-shell">
+      <div class="card auth-card">
+        <h1>Create Account</h1>
+        <p>Join tournaments, track your matches, and engage with the community.</p>
+        <form id="registerForm" class="stack">
+          <div class="form-group">
+            <label for="registerName">Name</label>
+            <input id="registerName" required />
+          </div>
+          <div class="form-group">
+            <label for="registerEmail">Email</label>
+            <input id="registerEmail" type="email" required />
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <input id="registerPassword" type="password" minlength="6" required />
+          </div>
+          <button class="btn" type="submit">Create Account</button>
+        </form>
+      </div>
+    </main>
+
+    <script type="module" src="./js/register.js"></script>
+  </body>
+</html>

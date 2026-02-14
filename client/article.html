@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameHub | Article</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a class="logo" href="index.html"><img src="./assets/images/logo.svg" alt="GameHub" /><span>GameHub</span></a>
+        <button class="mobile-toggle">Menu</button>
+        <nav class="nav-links">
+          <a class="nav-link" data-page="index.html" href="index.html">Home</a>
+          <a class="nav-link" data-page="tournaments.html" href="tournaments.html">Tournaments</a>
+          <a class="nav-link" data-page="leaderboard.html" href="leaderboard.html">Leaderboard</a>
+          <a class="nav-link" data-page="news.html" href="news.html">News</a>
+          <a class="nav-link" data-page="profile.html" href="profile.html">Profile</a>
+          <a class="nav-link" data-page="admin.html" href="admin.html">Admin</a>
+        </nav>
+        <div class="auth-links" data-auth-slot></div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container grid grid-2">
+          <article id="articleContainer" class="card card-body"></article>
+
+          <aside class="card card-body">
+            <div class="section-head">
+              <div class="eyebrow">Community</div>
+              <h2>Article Comments</h2>
+            </div>
+            <form id="articleCommentForm" class="mb-2">
+              <div class="form-group">
+                <label for="articleComment">Comment</label>
+                <textarea id="articleComment" required></textarea>
+              </div>
+              <button class="btn secondary" type="submit">Post Comment</button>
+            </form>
+            <div id="articleComments" class="list"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container"><p>GameHub Article</p></div>
+    </footer>
+
+    <script type="module" src="./js/article.js"></script>
+  </body>
+</html>
